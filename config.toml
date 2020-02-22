@@ -1,0 +1,72 @@
+# baseURL = "http://example.org/"
+# languageCode = "en-us"
+# title = "My New Hugo Site"
+# theme = "mainroad"
+
+baseURL = "/"
+title = "The Brain Of Belsole"
+languageCode = "en-us"
+paginate = "10" # Number of posts per page
+theme = "mainroad"
+# disqusShortname = "" # Enable Disqus comments by entering your Disqus shortname
+# googleAnalytics = "" # Enable Google Analytics by entering your tracking id
+
+[Author] # Used in authorbox
+  name = "Chris Belsole"
+  bio = "The true biohazard is having to write a bio."
+  avatar = "img/chris2.png"
+
+[Params]
+  subtitle = "Programmer, gamer, person." # Subtitle of your site. Used in site header
+  description = "Thoughts about tech and stuff from the brain of Belsole." # Site description. Used in meta description
+  copyright = "Chris Belsole" # Footer copyright holder, otherwise will use site title
+#   opengraph = true # Enable OpenGraph if true
+#   twitter_cards = true # Enable Twitter Cards if true
+#   readmore = false # Show "Read more" button in list if true
+  authorbox = true # Show authorbox at bottom of pages if true
+#   toc = true # Enable Table of Contents
+#   post_navigation = true # Show post navigation at bottom of pages if true
+  # post_meta = ["date", "categories", "translations"] # Order of post meta information
+  post_meta = ["date", "translations"] # Order of post meta information
+  # mainSections = ["post", "blog", "news"] # Specify section pages to show on home page and the "Recent articles" widget
+  dateformat = "2006-01-02" # Change the format of dates
+#   mathjax = true # Enable MathJax
+#   mathjaxPath = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js" # Specify MathJax path
+#   mathjaxConfig = "TeX-AMS-MML_HTMLorMML" # Specify MathJax config
+  highlightColor = "#e22d30" # Override highlight color
+  customCSS = ["css/custom.css"] # Include custom CSS files
+  customJS = ["js/custom.js"] # Include custom JS files
+
+[Params.sidebar]
+  home = "right" # Configure layout for home page
+  list = "left"  # Configure layout for list pages
+  single = false # Configure layout for single pages
+  # Enable widgets in given order
+  # widgets = ["search", "recent", "categories", "taglist", "social", "languages"]
+  widgets = ["search", "recent", "taglist", "social"]
+
+[Params.widgets]
+  recent_num = 5 # Set the number of articles in the "Recent articles" widget
+  tags_counter = false # Enable counter for each tag in "Tags" widget
+
+[Params.widgets.social]
+#   # Enable parts of social widget
+#   facebook = "username"
+  twitter = "cbelsole"
+#   instagram = "username"
+  linkedin = "christopher-belsole-4b705013"
+#   telegram = "username"
+  github = "cbelsole"
+#   gitlab = "username"
+#   bitbucket = "username"
+#   email = "example@example.com"
+
+# # Custom social links
+# [[Params.widgets.social.custom]]
+#   title = "Youtube"
+#   url = "https://youtube.com/user/username"
+#   icon = "youtube.svg" # Optional. Path relative to "layouts/partials"
+
+# [[Params.widgets.social.custom]]
+#   title = "My Home Page"
+#   url = "http://example.com"
