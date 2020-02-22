@@ -1,7 +1,7 @@
 ---
 title: "How I decide to work on a side project"
 date: "2020-01-04"
-description: "Example article description"
+description: "Steps for what makes a good side project and how to prioritize what to work on."
 categories:
   - "Workflows"
 tags:
