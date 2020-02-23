@@ -21,6 +21,7 @@ jobs:
 
       - name: Deploy to S3
         run: |
+          ls -R
           sudo apt-get update -y
           sudo apt-get install -y --no-install-recommends s3cmd
           sudo rm -rf /var/lib/apt/lists/*
