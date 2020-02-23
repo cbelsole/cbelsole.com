@@ -33,8 +33,8 @@ jobs:
       #   run: aws s3 sync ./public/ s3://${{ secrets.AWS_S3_BUCKET }} --delete
       - name: Deploy to S3
         run: |
-          apt-get update -y
-          apt-get install -y --no-install-recommends s3cmd
-          rm -rf /var/lib/apt/lists/*
-          apt-get clean -y
-          s3cmd sync public/* s3://cbelsole.com/ --delete-removed --secret_key=${{ secrets.AWS_ACCESS_KEY_ID }} --access_token=${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          sudo apt-get update -y
+          sudo apt-get install -y --no-install-recommends s3cmd
+          sudo rm -rf /var/lib/apt/lists/*
+          sudo apt-get clean -y
+          s3cmd sync public/* s3://cbelsole.com/ --delete-removed --no-check-certificate --secret_key=${{ secrets.AWS_ACCESS_KEY_ID }} --access_token=${{ secrets.AWS_SECRET_ACCESS_KEY }}
