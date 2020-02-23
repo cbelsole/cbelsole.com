@@ -25,5 +25,5 @@ jobs:
           sudo apt-get install -y --no-install-recommends s3cmd
           sudo rm -rf /var/lib/apt/lists/*
           sudo apt-get clean -y
-          echo ${{ secrets.S3CMD_CONFIG }} > /home/runner/.s3cfg
+          echo "${{ secrets.S3CMD_CONFIG }}" > /home/runner/.s3cfg
           s3cmd sync public/* s3://cbelsole.com/ --delete-removed
