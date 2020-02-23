@@ -33,7 +33,8 @@ jobs:
       #   run: aws s3 sync ./public/ s3://${{ secrets.AWS_S3_BUCKET }} --delete
       - name: Deploy to S3
         uses: jusbrasil/github-action-s3cmd@master
+        args:
+          - "s3cmd sync public/* s3://cbelsole.com/ --delete-removed"
         env:
           ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY_ID }}
           SECRET_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        run: s3cmd sync public/* s3://cbelsole.com/ --delete-removed
