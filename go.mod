@@ -1,4 +1,4 @@
-module github.com/cbelsole/cbelsole.github.io
+module github.com/cbelsole/cbelsole.com
 
 go 1.13
 
