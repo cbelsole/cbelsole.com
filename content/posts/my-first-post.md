@@ -3,9 +3,8 @@ title: "How I decide to work on a side project"
 date: "2020-01-04"
 description: "Steps for what makes a good side project and how to prioritize what to work on."
 categories:
-  - "Workflows"
-tags:
   - "Side Projects"
+tags:
   - "Meta"
 lead: "Don't waste months on unproductivity"
 draft: false

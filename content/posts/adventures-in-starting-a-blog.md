@@ -3,9 +3,15 @@ title: "Adventures in Starting a Blog"
 date: 2020-02-29T16:42:34-05:00
 draft: false
 description: "My personal journey setting up a blog."
-tags:
+categories:
   - "Side Projects"
+tags:
   - "Blog"
+  - "Hugo"
+  - "Gatsby"
+  - "Github Actions"
+  - "Netlify CMS"
+  - "Forestry.io"
 lead: "A million little decisions."
 ---
 
@@ -15,7 +21,7 @@ So like, why do this again? Since my Jekyll days static site generators have got
 
 # Goals
 
-For my static site experiment I wanted to set a few goals with a focusing on creating content and not configuration:
+For my static site experiment I wanted to set a few goals with a focus on creating content and not configuration:
 
 1.  I want a static site generator that works out of the box without a lot of configuration
 
@@ -33,7 +39,7 @@ If we check [staticgen.com](https://www.staticgen.com/) there are currently 281 
 
 ## Gatsby
 
-Gatsby's ability for server side rendering is appealing especially if you have a few pages that are going to be visited frequently. For this project though I want something that works out of the box and requires very little upkeep. If you’ve ever worked with JS in production you know that dependencies can cause a maintenance nightmare if you 1. Don’t lock them down and 2. Don’t keep them up to date. For example, try upgrading your version of React after being 2 major versions behind.
+Gatsby's ability for server-side rendering is appealing especially if you have a few pages that are going to be visited frequently. For this project though I want something that works out of the box and requires very little upkeep. If you’ve ever worked with JS in production you know that dependencies can cause a maintenance nightmare if you 1. Don’t lock them down and 2. Don’t keep them up to date. For example, try upgrading your version of React after being 2 major versions behind.
 
 ## Hugo
 
@@ -41,7 +47,7 @@ I have been following Hugo for a long time. I experimented with it once when it 
 
 > **Protip:** Github user TrentSPalmer created a script to rank Hugo themes by stars [hugo_themes_report](https://github.com/TrentSPalmer/hugo_themes_report).
 
-What about dependencies? Installing Hugo comes with a long list of dependencies, but since the only thing I installed is Hugo I can assume that they will manage that list for me. So upgrading Hugo should be fairly straightforward. That coupled with Go's promise to maintain backwards compatibility lowers the tooling and maintenance costs. I did read a few cases where Hugo did not perform the same version over version, but I’ve lived a lifetime maintaining JS applications. So if I have to deal with the occasional upgrade bug from one dependency rather myriads I am fine with it.
+What about dependencies? Installing Hugo comes with a long list of dependencies, but since the only thing I installed is Hugo I can assume that they will manage that list for me. So upgrading Hugo should be fairly straightforward. That coupled with Go's promise to maintain backward compatibility lowers the tooling and maintenance costs. I did read a few cases where Hugo did not perform the same version over version, but I’ve lived a lifetime maintaining JS applications. So if I have to deal with the occasional upgrade bug from one dependency rather myriads I am fine with it.
 
 # Setup
 
@@ -66,7 +72,7 @@ git submodule add https://github.com/vimux/mainroad themes/mainroad
 
 To manage my blog tags and content I looked into [Forestry.io](https://forestry.io) and [Netlify CMS](https://www.netlifycms.org) since both of these had plug-and-play content tools that integrated with Github. The idea here is to make managing content easier by using a UI rather than editing post metadata manually.
 
-> **TL;DR** it did not work out. The need to integrate with their specific sites outweighed the benefits of a CMS; especially with so little content.
+> **TL;DR** it did not work out. The need to integrate with their specific sites outweighed the benefits of a CMS, especially with so little content.
 
 ## Netlify CMS
 
@@ -76,7 +82,7 @@ The experiment started out with a lot of promise since in their words:
 
 > If you hook up Netlify CMS to your website, you're basically adding a tool for content editors to make commits to your site repository without touching code or learning Git.
 
-The downside here is that plugging in the CMS requires you to use their identity service for oauth and that means you have to deploy via Netlify. This is not something I wanted to do since the price per usage is good compared to Zeit but not as good as AWS. You can host your own identity server, but that would necessitate standing up a server which would also increase costs.
+The downside here is that plugging in the CMS requires you to use their identity service for OAuth and that means you have to deploy via Netlify. This is not something I wanted to do since the price per usage is good compared to Zeit but not as good as AWS. You can host your own identity server, but that would necessitate standing up a server which would also increase costs.
 
 ## Forestry.io
 
