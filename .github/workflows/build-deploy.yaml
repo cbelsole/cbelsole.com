@@ -26,7 +26,9 @@ jobs:
         uses: chrislennon/action-aws-cli@v1.1
 
       - name: Deploy to S3
-        run: aws s3 sync ./public/ s3://${{ secrets.AWS_S3_BUCKET }} --acl public-read --follow-symlinks --delete --cache-control="max-age=3600"
+        run: |
+          aws s3 sync ./public/ s3://${{ secrets.AWS_S3_BUCKET }} --acl public-read --follow-symlinks --delete --cache-control="max-age=3600"
+          aws cloudfront create-invalidation --distribution-id $CDN_DISTRIBUTION_ID --paths "/*"
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
